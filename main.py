@@ -3,10 +3,6 @@ import defcmd
 import sys
 import os
 
-def xay():
-    x = input(lang.xx)
-    y = input(lang.yy)
-
 while True:
     print(lang.welcome)
     print(" ")
@@ -34,7 +30,7 @@ while True:
                     defcmd.xay4()
 
                 else:
-                    if mode == "~":
+                    if mode == "**":
                         defcmd.xay5()
 
                     else:
@@ -42,17 +38,11 @@ while True:
                         print(lang.error01)
                         print(lang.error02)
                         try:
-                            userexit = input()
+                            input()
                         except KeyboardInterrupt:
-                            sys.exit()
-                        if str(userexit) == "exit":
                             sys.exit()
                         else:
                             defcmd.clear()
 
     
     defcmd.stop()
-                            
-                        
-                            
-                    
