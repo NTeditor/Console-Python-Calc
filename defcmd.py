@@ -53,11 +53,13 @@ def xay5():
         if int(x) > 100:
             print("")
             print(lang.overflowX)
-            usercontinue = input("Проигнорировать предупрежденние? Y/N ")
+            usercontinue = input(lang.ignor)
             if usercontinue == "Y":
                 print(int(x) ** int(y))
+                stop()
             else:
                 clear()
+                stop()
     except ValueError:
         print(lang.errormode01)
     except MemoryError:
@@ -68,9 +70,12 @@ def xay5():
         if int(y) > 100:
                 print("")
                 print(lang.overflowY)
-                usercontinue = input("Проигнорировать предупрежденние? Y/N ")
+                usercontinue = input(lang.ignor)
                 if usercontinue == "Y":
                     print(int(x) ** int(y))
+                else:
+                    clear()
+                    stop()
         else:
             print(int(x) ** int(y))
         
